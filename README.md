@@ -11,4 +11,5 @@ It is a tool for __“Identity and Access Management__. Additionally, Keycloak i
 - Identity Brokering
 - Social Identity Providers
 - Pages Customization
-- 
+
+![Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
