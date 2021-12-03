@@ -26,3 +26,9 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 The token may denote an __identifier__ used to retrieve the authorization information or may self-contain the authorization information in a verifiable manner (i.e a token string consisting of some data and a signature)
 - Identifier Type : An alphanumeric character of certain length (ex: ByL56Vd2KzDJDhufzuF7), the length of the string depends upon the type of authorization server.
 - Self contain authorization information : A very long alphanumeric string (this contains much more information, which contains all the values in json format encrypted in base64 format)
+
+### Identifier Type Access Token
+| Authorization Server |
+| :--- | :--- | :--- | :--- |
+| Access Token | user_id | scope | expires |
+| ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
