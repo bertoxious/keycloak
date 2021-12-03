@@ -81,3 +81,7 @@ Grant Type is a way an application gets an access token.
 | Authorization Code | Client Credentials | PKCE Enhanced Authorization Code | Authorization Code | Device Code |
 | Password Grant | - | Implicit Flow (Password Grant) | PKCE Enhanced Authorization Code | - |
 | - | - | - | Implicit Flow (Password Grant) | - |
+
+### Refresh Token Grant Type
+___Refresh token is generated along with an Access Token.___
+Used to exchange a refresh token for an access token. It allows client applications to refresh and expired access token for a new one and it allows client applications to continue to have a valid access token without any further interactions with an end user. If an access token gets expired they can refresh it and can continue interacting with API with newly refresh access token.
