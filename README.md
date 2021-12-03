@@ -65,3 +65,12 @@ ___Default Profile Claims___
 - zoneinfo
 - locale
 - updated_at
+
+___Address Claims___
+- formatted
+- street_address
+- locality
+- region
+- postal_code
+- country
+
