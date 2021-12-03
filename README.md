@@ -44,8 +44,8 @@ It comes as an __additional layer__ on the top of `OAuth 2.0` and it is an ident
 ### Claim : 
 ___claims are name/value pairs that contain information about a user, as well meta-information about the OIDC service.___
 | ___Scope___ | ___Purpose___ |
-| :--- | :--- |
-| profile | reqeusts access to default profile claims |
+| :---: | :---: |
+| profile | requests access to default profile claims |
 | email | requests access to email and verified claims |
 | address | requests access to address claim |
 | phone | requests access to phone number and phone number verified claims |
