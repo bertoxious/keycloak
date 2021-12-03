@@ -20,3 +20,21 @@ or it can be `plain`.
 
 ## Code Challenge:
 `code_challenge = BASE64URL-ENCODE(SHA256(ASCII(code_verifier)))`
+
+## Step 1:
+Make a __GET__ request to the url 
+
+```
+http://localhost:8081/auth/realms/{name_of_realm}/protocol/openid-connect/auth
+```
+
+Add these values to the params
+
+| Key | Value |
+| :---: | :---: |
+| client_id | {client_id} |
+| response_type | code |
+| scope | openid |
+| redirect_uri | {redirect_url} |
+| state | {random_alphanumeric_string} |
+| code_challenge_method | 
