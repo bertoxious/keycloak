@@ -74,3 +74,6 @@ ___Address Claims___
 - postal_code
 - country
 
+### Grant Type
+Grant Type is a way an application gets an access token.
+| Server Side Web App | Server Side Script with no UI | Javascript Single Page App | Mobile Native App | Device | 
