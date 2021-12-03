@@ -37,4 +37,26 @@ Add these values to the params
 | scope | openid |
 | redirect_uri | {redirect_url} |
 | state | {random_alphanumeric_string} |
-| code_challenge_method | 
+| code_challenge_method | S256 |
+| code_challenge | {code_challenge_value_from_code_challenge_generator} |
+
+This will again load the autorization server login page and after sign in it will redirect to the `redirect_uri` and then we will exchange the authorization code generated with the access token.
+
+## Step 2:
+Make a __POST__ request to 
+
+```
+http://localhost:8081/auth/realms/{name_of_realm}/protocol/openid-connect/token
+```
+
+and in the body, x-www-form-urlencoded
+| Key | Value |
+| :---: | :---: |
+| grant_type | authorization_code |
+| client_id | {client_id} |
+| client_secret | {client_secret} |
+| code | {authorization_code_received} |
+| redirect_uri | {redirect_uri} |
+| code_verifier | {code_verifier_value_from_the_generator} | 
+
+and this will generate our `access_token`, `refresh_token` and `id_token`.
