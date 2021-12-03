@@ -77,3 +77,7 @@ ___Address Claims___
 ### Grant Type
 Grant Type is a way an application gets an access token.
 | Server Side Web App | Server Side Script with no UI | Javascript Single Page App | Mobile Native App | Device | 
+| :---: | :---: | :---: | :---: | :---: | 
+| Authorization Code | Client Credentials | PKCE Enhanced Authorization Code | Authorization Code | Device Code |
+| Password Grant | - | Implicit Flow (Password Grant) | PKCE Enhanced Authorization Code | - |
+| - | - | - | Implicit Flow (Password Grant) | - |
