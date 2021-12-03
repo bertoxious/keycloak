@@ -40,3 +40,27 @@ It comes as an __additional layer__ on the top of `OAuth 2.0` and it is an ident
 | OAuth 2.0 | OAuth 2.0 + Open ID Connect |
 | :--- | :--- |
 | Access Token | ID Token + Access Token |
+
+### Claim : claims are name/value pairs that contain information about a user, as well meta-information about the OIDC service.
+| Scope | Purpose |
+| :--- | :--- |
+| profile | reqeusts access to default profile claims |
+| email | requests access to email and verified claims |
+| address | requests access to address claim |
+| phone | requests access to phone number and phone number verified claims |
+
+___Default Profile Claims___
+- name
+- family_name
+- given_name
+- middle_name
+- nickname
+- preferred_username
+- profile
+- picture
+- website
+- gender
+- birthdate
+- zoneinfo
+- locale
+- updated_at
