@@ -41,7 +41,8 @@ It comes as an __additional layer__ on the top of `OAuth 2.0` and it is an ident
 | :--- | :--- |
 | Access Token | ID Token + Access Token |
 
-### Claim : claims are name/value pairs that contain information about a user, as well meta-information about the OIDC service.
+### Claim : 
+- claims are name/value pairs that contain information about a user, as well meta-information about the OIDC service.
 | ___Scope___ | ___Purpose___ |
 | :--- | :--- |
 | profile | reqeusts access to default profile claims |
