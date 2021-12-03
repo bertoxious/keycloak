@@ -18,3 +18,4 @@ It is a tool for __“Identity and Access Management__. Additionally, Keycloak i
 | Confidential Client | Public Client |
 | :---  | ---: |
 | Secure app running on server | Native Apps on User Device |
+| - | Single Page browser based App |
