@@ -16,7 +16,7 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 
 ### OAuth 2.0 Client Types:
 
-| Confidential Client  (Can keep client secret safe) | Public Client  (Cannot keep client ID and secret safe) |
+| ___Confidential Client___  (Can keep client secret safe) | ___Public Client___  (Cannot keep client ID and secret safe) |
 | :---  | :--- |
 | Secure app running on server | Native Apps on User Device |
 | - | Single Page browser based App |
