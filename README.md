@@ -31,18 +31,18 @@ The token may denote an __identifier__ used to retrieve the authorization inform
 
 ### Identifier Type Access Token
 
-| Access Token | user_id | scope | expires |
+| ___Access Token___ | ___user_id___ | ___scope___ | ___expires___ |
 | :--- | :--- | :--- | :--- |
 | ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
 
 ### Open ID Connect
 It comes as an __additional layer__ on the top of `OAuth 2.0` and it is an identity layer that provides the client application with an Identity information about the user. The __Authorization Server__ performing the same is called as __Identity Provider__.
-| OAuth 2.0 | OAuth 2.0 + Open ID Connect |
+| ___OAuth 2.0___ | ___OAuth 2.0 + Open ID Connect___ |
 | :--- | :--- |
 | Access Token | ID Token + Access Token |
 
 ### Claim : claims are name/value pairs that contain information about a user, as well meta-information about the OIDC service.
-| Scope | Purpose |
+| ___Scope___ | ___Purpose___ |
 | :--- | :--- |
 | profile | reqeusts access to default profile claims |
 | email | requests access to email and verified claims |
