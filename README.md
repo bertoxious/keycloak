@@ -34,3 +34,6 @@ The token may denote an __identifier__ used to retrieve the authorization inform
 | Access Token | user_id | scope | expires |
 | :--- | :--- | :--- | :--- |
 | ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
+
+#### Open ID Connect
+It comes as an __additional layer__ on the top of `OAuth 2.0` and it is an identity layer that provides the client application with an Identity information about the user. The __Authorization Server__ performing the same is called as __Identity Provider__.
