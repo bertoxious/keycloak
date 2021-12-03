@@ -19,4 +19,5 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 | :---  | :--- |
 | Secure app running on server | Native Apps on User Device |
 | - | Single Page browser based App |
+----------------------------------
 ![image](https://images.velog.io/images/denmark-choco/post/fad1a424-7b3f-41f3-88eb-fb2f9d0d0813/oauth2-flow.png)
