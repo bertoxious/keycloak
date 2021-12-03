@@ -30,3 +30,16 @@ This will return us an access token or json encrypted base64.
 ![image](https://m.media-amazon.com/images/G/01/mobile-apps/dex/ask-accountlinking/auth-code-grant-flow-sequence._TTH_.png)
 
 [Docker compose for keycloak](https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
+
+Make a GET Request from __Postman__
+```
+http://localhost:8081/auth/realms/{name_of_realm}/protocol/openid-connect/auth
+```
+and in the `params` add 
+| Key | Value |
+| :---: | :---: |
+| response_type | code |
+| client_id | {id_of_the_client} |
+| state | {random_alphanumeric_number} |
+| scope | openid profile |
+| redirect_uri | {redirect_url_set_for_client_in_keycloak} |
