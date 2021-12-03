@@ -15,8 +15,6 @@ It is a tool for __“Identity and Access Management__. Additionally, Keycloak i
  ### [Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
 
 ### OAuth 2.0 Client Types:
-- Confidential Client:
- - Secure app running on a server
-- Public Client:
- - Native Apps on User Device
- - Single Page Browser-based App
+| Confidential Client | Public Client |
+| :---  | ---: |
+| Secure app running on server | Native Apps on User Device |
