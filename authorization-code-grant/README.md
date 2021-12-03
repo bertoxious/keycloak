@@ -31,7 +31,8 @@ This will return us an access token or json encrypted base64.
 
 [Docker compose for keycloak](https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
 
-Make a GET Request from __Postman__
+## STEP 1:
+Make a __GET__ Request from __Postman__
 ```
 http://localhost:8081/auth/realms/{name_of_realm}/protocol/openid-connect/auth
 ```
@@ -43,3 +44,31 @@ and in the `params` add
 | state | {random_alphanumeric_number} |
 | scope | openid profile |
 | redirect_uri | {redirect_url_set_for_client_in_keycloak} |
+
+After this step the authorization server will redirect you to the user authentication page. and after login it will redirect to the __redirect_uri__ 
+then it will provide with the `state` same as provided earlier in the __GET__ Request, a `session_state` and the `code` i.e. authorization_code that will be needed to exchange for an access token.
+
+## STEP 2:
+Now let's try to exchange this authorization code for an `Access Token`  
+So now let's create a new http __POST__ request.  
+```
+http://localhost:8081/auth/realms/{name_of_the_realm}/protocol/openid-connect/token
+```
+and in the body x-www-form-urlencoded
+| Key | Value |
+| :---: | :---: |
+| grant_type | authorization_code |
+| client_id | {client_id} |
+| client_secret | {client_secret} |
+| code | {generated_authorization_code} |
+| redirect_uri | {redirect_uri} | 
+
+```json
+{ 
+"error": "invalid_grant",
+"error_description": "Code not valid"
+}
+```
+___This error means the code/ authorization code that was generated has expired.___
+
+Otherwise it will generate an `access_token` ,a `refresh_token` and a `id_token`.
