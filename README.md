@@ -28,8 +28,7 @@ The token may denote an __identifier__ used to retrieve the authorization inform
 - Self contain authorization information : A very long alphanumeric string (this contains much more information, which contains all the values in json format encrypted in base64 format)
 
 ### Identifier Type Access Token
-| Authorization Server |
-|  :---: |
+Authorization Server
 | Access Token | user_id | scope | expires |
 | :--- | :--- | :--- | :--- |
 | ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
