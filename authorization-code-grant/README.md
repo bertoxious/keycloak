@@ -5,6 +5,8 @@ For this to work the client application (ex: a website) must be capable of handl
 
 Authorization Code request or Code Grant:
 
+Use this code to generate access token.
+
 ```
 GET/authorize 
 ?response_type=code    
@@ -13,3 +15,16 @@ GET/authorize
 &scope={Scope}
 &client_id={Client_id}
 ```
+
+The autorization server returns the same value for state in order to validate.
+
+```
+POST https://{authorization-server-url}/token
+?grant_type=authorization_code
+&code={code}
+&redirect_uri={redirect-uri}
+&client_id={client_id}
+&client_secret={client_secret}\
+```
+This will return us an access token or json encrypted base64.
+![image](https://m.media-amazon.com/images/G/01/mobile-apps/dex/ask-accountlinking/auth-code-grant-flow-sequence._TTH_.png)
