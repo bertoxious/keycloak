@@ -15,6 +15,7 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
  ### [Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
 
 ### OAuth 2.0 Client Types:
+
 | Confidential Client  (Can keep client secret safe) | Public Client  (Cannot keep client ID and secret safe) |
 | :---  | :--- |
 | Secure app running on server | Native Apps on User Device |
@@ -23,12 +24,13 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 ![image](https://images.velog.io/images/denmark-choco/post/fad1a424-7b3f-41f3-88eb-fb2f9d0d0813/oauth2-flow.png)
 
 ### Access Token Types
+
 The token may denote an __identifier__ used to retrieve the authorization information or may self-contain the authorization information in a verifiable manner (i.e a token string consisting of some data and a signature)
 - Identifier Type : An alphanumeric character of certain length (ex: ByL56Vd2KzDJDhufzuF7), the length of the string depends upon the type of authorization server.
-- Self contain authorization information : A very long alphanumeric string (this contains much more information, which contains all the values in json format encrypted in base64 format)
+- Self contain authorization information : A very long alphanumeric string (this contains much more information, which contains all the values in json format encrypted in base64 format). Separated into a __Header__, __Payload__ and __Signature__ containing __Type of token, Algorithm__ , __Information__ and __Raw Material to Validate Access Token__ respectively.
 
 ### Identifier Type Access Token
-Authorization Server
+
 | Access Token | user_id | scope | expires |
 | :--- | :--- | :--- | :--- |
 | ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
