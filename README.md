@@ -29,6 +29,6 @@ The token may denote an __identifier__ used to retrieve the authorization inform
 
 ### Identifier Type Access Token
 | Authorization Server |
-| :--- | :--- | :--- | :--- |
 | Access Token | user_id | scope | expires |
+| :--- | :--- | :--- | :--- |
 | ByL56Vd2KzDJDhufzuF7 | JWefs12aF | profile,documents | 634917591 | 
