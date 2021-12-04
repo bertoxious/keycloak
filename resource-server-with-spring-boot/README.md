@@ -5,7 +5,7 @@ Create a spring boot project with dependencies:
 - Spring Devtools
 - OAuth2 Resource Server
 
-Now let's create a rest controller 
+Now let's create a _Rest controller_ 
 
 ```java
 
