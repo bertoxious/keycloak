@@ -29,3 +29,16 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri = http://localhost:8081/aut
 spring.security.oauth2.resourceserver.jwt.jwk-set-uri = http://localhost:8081/auth/realms/{name_of_realm}/protocol/openid-connect/certs
 # this url is pointing to public key endpoint
 ```
+
+Now let's create a _Token Controller_
+```java
+@RestController
+@RequestMapping("/token")
+public class TokenController {
+    @GetMapping
+    public Map<String, Object> getToken(@AuthenticationPrincipal Jwt jwt){
+//        return jwt.getTokenValue();
+        return Collections.singletonMap("Principal",jwt);
+    }
+}
+```
