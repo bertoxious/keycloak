@@ -110,3 +110,18 @@ This would return us a json file somewhat similar to this
     }
 }
 ```
+## Resource Server - ___Scope Based Access Control___
+_Scope_ is a mechanism in OAuth 2.0 to limit an application's access to user account. An application can request one or more scopes, this information is then presented to the user in the consent screen and the access token issued to the application will be limited to the scopes granted.
+
+Let's create a class by the name of _WebSecurity_ extending the _WebSecurityConfigureAdapter_  
+```java
+
+@EnableWebSecurity
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().anyRequest().authenticated().and().oauth2ResourceServer().jwt();
+    }
+}
+```
+
