@@ -10,9 +10,9 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 - External Identity Source Sync
 - Identity Brokering
 - Social Identity Providers
-- Pages Customization
+- Pages Customization  
 
-[Keycloak Docker Compose file] (https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
+ [Keycloak Docker Compose file] (https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
 
  ### [Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
 
