@@ -87,6 +87,6 @@ ___Refresh token is generated along with an Access Token.___
 Used to exchange a refresh token for an access token. It allows client applications to refresh and expired access token for a new one and it allows client applications to continue to have a valid access token without any further interactions with an end user. If an access token gets expired they can refresh it and can continue interacting with API with newly refresh access token.
 
 ## GET STARTED 
-[ 1. Authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/authorization-code-flow)
-[ 2. PKCE enhanced authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/pkce-enhanced-authorization-code-flow)
-[ 3. Client credentials authorization flow ](https://github.com/bertoxious/keycloak/tree/main/client-credentials-authorization-flow)
+[ 1. Authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/authorization-code-flow)  
+[ 2. PKCE enhanced authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/pkce-enhanced-authorization-code-flow)  
+[ 3. Client credentials authorization flow ](https://github.com/bertoxious/keycloak/tree/main/client-credentials-authorization-flow)  
