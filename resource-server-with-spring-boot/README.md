@@ -115,13 +115,24 @@ _Scope_ is a mechanism in OAuth 2.0 to limit an application's access to user acc
 
 Let's create a class by the name of _WebSecurity_ extending the _WebSecurityConfigureAdapter_  
 ```java
-
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated().and().oauth2ResourceServer().jwt();
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/users/status/check").hasAuthority("SCOPE_profile")
+        .anyRequest().authenticated().and().oauth2ResourceServer().jwt();
     }
 }
 ```
-
+Now let's create an access token by first making __GET__ request 
+```
+http://localhost:8081/auth/realms/ashish/protocol/openid-connect/auth?client_id=myclient&response_type=code&scope=openid profile&redirect_uri=http://localhost:8083/callback&state=hasdifasdf
+```
+and then exchange the code generated to pass on with the __POST__ request
+```
+http://localhost:8081/auth/realms/ashish/protocol/openid-connect/token
+```
+with the following values in body 
+``` json
+[{"key":"grant_type","value":"authorization_code","equals":true,"description":null,"enabled":true},{"key":"client_id","value":"myclient","equals":true,"description":null,"enabled":true},{"key":"client_secret","value":"ef0ba39c-aaf6-4cc0-9b20-9cd95a945e3e","equals":true,"description":null,"enabled":true},{"key":"code","value":"fd27fddc-f2ca-46c5-bd0a-3603d32961ea.0a346926-e9f1-4e51-bb8b-a0c28a91bc81.975286e8-cfe0-490d-9601-be8e2e63a079","equals":false,"description":null,"enabled":true},{"key":"redirect_uri","value":"http://localhost:8083/callback","equals":true,"description":null,"enabled":true}]
+```
