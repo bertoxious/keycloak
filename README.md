@@ -10,7 +10,9 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 - External Identity Source Sync
 - Identity Brokering
 - Social Identity Providers
-- Pages Customization
+- Pages Customization  
+
+ ## [___Keycloak Docker Compose file___](https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
 
  ### [Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
 
@@ -90,4 +92,5 @@ Used to exchange a refresh token for an access token. It allows client applicati
 [ 1. Authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/authorization-code-flow)  
 [ 2. PKCE enhanced authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/pkce-enhanced-authorization-code-flow)  
 [ 3. Client credentials authorization flow ](https://github.com/bertoxious/keycloak/tree/main/client-credentials-authorization-flow)  
-[ 4. Password grant authorization flow ](https://github.com/bertoxious/keycloak/tree/main/password-grant-authorization-flow)
+[ 4. Password grant authorization flow ](https://github.com/bertoxious/keycloak/tree/main/password-grant-authorization-flow)  
+[ 5. Refreshing access tokens ](https://github.com/bertoxious/keycloak/tree/main/refreshing-access-tokens)  
