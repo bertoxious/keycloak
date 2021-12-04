@@ -5,6 +5,8 @@ Create a spring boot project with dependencies:
 - Spring Devtools
 - OAuth2 Resource Server
 
+_My Keycloak server is running on port 8081_ as per [_keycloak docker compose file_](https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
+
 Now let's create a _Rest controller_ 
 
 ```java
