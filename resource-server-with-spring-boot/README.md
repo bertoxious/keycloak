@@ -136,3 +136,11 @@ with the following values in body
 ``` json
 [{"key":"grant_type","value":"authorization_code","equals":true,"description":null,"enabled":true},{"key":"client_id","value":"myclient","equals":true,"description":null,"enabled":true},{"key":"client_secret","value":"ef0ba39c-aaf6-4cc0-9b20-9cd95a945e3e","equals":true,"description":null,"enabled":true},{"key":"code","value":"fd27fddc-f2ca-46c5-bd0a-3603d32961ea.0a346926-e9f1-4e51-bb8b-a0c28a91bc81.975286e8-cfe0-490d-9601-be8e2e63a079","equals":false,"description":null,"enabled":true},{"key":"redirect_uri","value":"http://localhost:8083/callback","equals":true,"description":null,"enabled":true}]
 ```
+and then make a get request to the _User Controller_ in the _Resource Server_
+```
+http://localhost:8080/users/status/check
+```
+along with following key and value in headers
+| Key | Value |
+| :---: | :---: |
+| Authorization | Bearer + `Access Token` |
