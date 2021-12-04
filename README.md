@@ -12,7 +12,7 @@ It is a tool for __"Identity and Access Management__". Additionally, Keycloak is
 - Social Identity Providers
 - Pages Customization
 
-## [___Keycloak Docker Compose file ___] (https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
+[___Keycloak Docker Compose file ___] (https://github.com/bertoxious/keycloak/blob/main/docker-compose.yml)
 
  ### [Flow of Credentials](https://www.oreilly.com/library/view/getting-started-with/9781449317843/httpatomoreillycomsourceoreillyimages986441.png)
 
