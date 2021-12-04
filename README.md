@@ -91,3 +91,4 @@ Used to exchange a refresh token for an access token. It allows client applicati
 [ 2. PKCE enhanced authorization code flow ](https://github.com/bertoxious/keycloak/tree/main/pkce-enhanced-authorization-code-flow)  
 [ 3. Client credentials authorization flow ](https://github.com/bertoxious/keycloak/tree/main/client-credentials-authorization-flow)  
 [ 4. Password grant authorization flow ](https://github.com/bertoxious/keycloak/tree/main/password-grant-authorization-flow)
+[ 5. Refreshing access tokens ](https://github.com/bertoxious/keycloak/tree/main/refreshing-access-tokens) 
