@@ -148,7 +148,7 @@ along with following key and value in headers
 ___Spring Security Roles and Authorities___
 | Role | Priviliges or Authorities |
 | :---: | :---: |
-| User  | view profile  view other users  edit own profile  |
+| User  | -view profile  -view other users  -edit own profile  |
 | Admin | view profile  view other users  edit own profile  edit profile of other users  delete other users  |
 | SuperAdmin | view profile  view other users  edit own profile  edit profile of other users  delete other users  edit/delete other admins  |
 
