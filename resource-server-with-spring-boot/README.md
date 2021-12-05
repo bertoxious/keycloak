@@ -170,4 +170,21 @@ public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedA
     }
 }
 ```
+and let's add that converter to our _Web Security_ class  
+```java
+@EnableWebSecurity
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
+        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(new KeycloakRoleConverter());
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/users/status/check")
+//                .hasAuthority("SCOPE_profile")
+                .hasRole("developer") //will check for the specific role
+//                .hasAnyRole("role_one", "role_two") // will check for any role and we can provide as many roles
+        .anyRequest().authenticated().and().oauth2ResourceServer().jwt()
+                .jwtAuthenticationConverter(jwtAuthenticationConverter);
+    }
+}
+```
 
