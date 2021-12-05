@@ -23,3 +23,5 @@ and create a delete user mapping with _@Secured()_ annotation added
     @DeleteMapping(path = "/{id}")
     public String deleteUser(@PathVariable String id){ return "Deleted user with id"+ id;}
 ```
+Let's c if it works
+Generate Authorization Code -> Exchange it for a access token -> Make a delete request to the mapped url with access token in headers Authorization.
