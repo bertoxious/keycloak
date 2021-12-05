@@ -25,3 +25,5 @@ and create a delete user mapping with _@Secured()_ annotation added
 ```
 Let's c if it works  
 _Generate Authorization Code_ -> _Exchange it for a access token_ -> _Make a delete request to the mapped url with access token in headers Authorization_.
+
+___If we try to delete it with any other role that is not assigned to the user it will say the request is Forbidden(403) and if we try to delete it without providing the access token in headers Authorization it will say the user is Unauthorized(401)___  
