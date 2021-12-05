@@ -187,4 +187,4 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     }
 }
 ```
-
+_Generate Authorization Code_ -> _Exchange it for an Access Token_ -> _Pass it through an Authorization Header to TokenController URL_ -> It will work.
