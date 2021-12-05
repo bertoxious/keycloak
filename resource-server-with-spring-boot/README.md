@@ -152,3 +152,6 @@ ___Spring Security Roles and Authorities___
 | Admin | <ul><li>view profile</li><li>view other users</li><li>edit own profile</li><li>edit profile of other users</li><li>delete other users</li></ul>  |
 | SuperAdmin | <ul><li>view profile</li><li>view other users</li><li>edit own profile</li><li>edit profile of other users</li><li>delete other users</li><li>edit/delete other admins</li></ul>  |
 
+Now from the keycloak create a role and assign that role to the user.
+in my case i have created a role by the name of _developer_ and assigned that role to the user by the name _user_
+
