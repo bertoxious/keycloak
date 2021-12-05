@@ -153,5 +153,21 @@ ___Spring Security Roles and Authorities___
 | SuperAdmin | <ul><li>view profile</li><li>view other users</li><li>edit own profile</li><li>edit profile of other users</li><li>delete other users</li><li>edit/delete other admins</li></ul>  |
 
 Now from the keycloak create a role and assign that role to the user.
-in my case i have created a role by the name of _developer_ and assigned that role to the user by the name _user_
+in my case i have created a role by the name of _developer_ and assigned that role to the user by the name _user_ and create a _RoleConverter_ class inside our __security__ package.
+```java
+public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
+    @Override
+    public Collection<GrantedAuthority> convert(Jwt jwt) {
+        Map<String, Object> realmAccess = (Map<String, Object>) jwt.getClaims().get("realm_access");
+        if(realmAccess == null || realmAccess.isEmpty()){
+            return new ArrayList<>();
+        }
+        Collection<GrantedAuthority> returnValue = ((List<String>) realmAccess.get("roles"))
+                .stream().map(roleName -> "ROLE_"+roleName)
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+        return returnValue;
+    }
+}
+```
 
