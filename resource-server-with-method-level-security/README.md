@@ -8,4 +8,18 @@ Let's start by adding method level security to our project continued from
 
 _@EnableGlobalMethodSecurity_ can be added to any java class with _@Configuration_ annotation or with _@EnableWebSecurity_  
 
-_@EnableGlobalMethodSecurity_ annotation allows us to __enable__ certain security annotations.  
+_@EnableGlobalMethodSecurity_ annotation allows us to __enable__ certain security annotations. Let's add it to our WebSecurity Class.  
+
+```java
+@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableWebSecurity
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+}
+```
+and create a delete user mapping with _@Secured()_ annotation added
+
+```java
+@Secured("ROLE_developer")
+    @DeleteMapping(path = "/{id}")
+    public String deleteUser(@PathVariable String id){ return "Deleted user with id"+ id;}
+```
