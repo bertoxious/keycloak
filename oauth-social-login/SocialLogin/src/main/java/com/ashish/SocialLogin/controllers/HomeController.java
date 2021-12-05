@@ -18,4 +18,8 @@ public class HomeController {
         return "homepage";
 
     }
+    @GetMapping("/great")
+    public String displayLogoutPage(){
+        return "great";
+    }
 }
