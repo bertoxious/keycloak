@@ -95,3 +95,4 @@ Used to exchange a refresh token for an access token. It allows client applicati
 [ 4. Password grant authorization flow ](https://github.com/bertoxious/keycloak/tree/main/password-grant-authorization-flow)  
 [ 5. Refreshing access tokens ](https://github.com/bertoxious/keycloak/tree/main/refreshing-access-tokens)  
 [ 6. Resouce server with spring boot ](https://github.com/bertoxious/keycloak/tree/main/resource-server-with-spring-boot)  
+[ 7. Social Login using OAuth ](https://github.com/bertoxious/keycloak/tree/main/oauth-social-login)
