@@ -5,24 +5,27 @@ Create a new Spring Boot Application with the following dependencies:
 - Thymeleaf
 - OAuth2 Client
 
+
+_Urls to create generate account for creating apps for authentication in __Google__, __Facebook__, __Github__ and __Okta__ these apps will return `client_id` and `secret_id` to deploy authentication.
+
 ___Added properties for google, facebook and okta authentication in `Application.properties` file___
 ```java
 # Redirect to Google for authentication
-spring.security.oauth2.client.registration.google.client-id=992179403281-jgh356j1886hiod2vactoljmnaj3ejg5.apps.googleusercontent.com
-spring.security.oauth2.client.registration.google.client-secret=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
+spring.security.oauth2.client.registration.google.client-id=_PASTE GOOGLE CLIENT ID HERE_
+spring.security.oauth2.client.registration.google.client-secret=_PASTE GOOGLE CLIENT SECRET HERE_
 
 # Redirect to facebook for authentication
-#spring.security.oauth2.client.registration.facebook.client-id=
-#spring.security.oauth2.client.registration.facebook.client-secret=
+#spring.security.oauth2.client.registration.facebook.client-id=_PASTE FACEBOOK CLIENT ID HERE_
+#spring.security.oauth2.client.registration.facebook.client-secret=_PASTE FACEBOOKS CLIENT SECRET HERE_
 
 # Redirect to github for authentication
-#spring.security.oauth2.client.registration.github.client-id=
-#spring.security.oauth2.client.registration.github.client-secret=
+#spring.security.oauth2.client.registration.github.client-id=//PASTE GITHUB CLIENT ID HERE_
+#spring.security.oauth2.client.registration.github.client-secret=//PASTE GITHUB CLIENT SECRET HERE_
 
 # Redirect to github for authentication
-spring.security.oauth2.client.registration.okta.client-id= 0oa2yyjqb09u2rxnJ5d7
-spring.security.oauth2.client.registration.okta.client-secret= gxxjWcIxAKD74dHr9amc9utOczoyv8qq_xi0jmK8
+spring.security.oauth2.client.registration.okta.client-id= //PASTE OKTA CLIENT ID HERE
+spring.security.oauth2.client.registration.okta.client-secret= //PASTE OKTA CLIENT SECRET HERE
 spring.security.oauth2.client.registration.okta.client-scope= openid,profile
 
-spring.security.oauth2.client.provider.okta.issuer-uri= https://dev-95405384.okta.com/oauth2/default
+spring.security.oauth2.client.provider.okta.issuer-uri= // THIS WILL BE MAILED TO YOU ONCE YOU HAVE CREATED THE OKTA DEVELOPERS ACCOUNT
 ```
