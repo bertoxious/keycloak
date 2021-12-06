@@ -9,5 +9,4 @@ public class RuSkeycloakApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RuSkeycloakApplication.class, args);
 	}
-
 }
