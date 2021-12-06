@@ -43,6 +43,13 @@
 			<artifactId>keycloak-core</artifactId>
 			<version>15.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-services</artifactId>
+			<version>15.0.2</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 	</dependencies>
 
