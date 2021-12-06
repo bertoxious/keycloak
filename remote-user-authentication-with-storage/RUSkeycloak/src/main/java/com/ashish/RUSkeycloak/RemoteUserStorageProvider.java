@@ -11,7 +11,7 @@ import org.keycloak.storage.user.UserLookupProvider;
 
 public class RemoteUserStorageProvider implements UserStorageProvider, UserLookupProvider, CredentialInputValidator {
 
-    private KeycloakSession keycloakSession; 
+    private KeycloakSession keycloakSession;
 
     public RemoteUserStorageProvider(KeycloakSession keycloakSession, ComponentModel componentModel) {
         this.keycloakSession = keycloakSession;
