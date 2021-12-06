@@ -5,7 +5,43 @@ Create a new Spring Boot Application with the following dependencies:
 - Thymeleaf
 - OAuth2 Client
 
+___Code for Web Security___
+```java
+@EnableWebSecurity
+public class WebSecurity extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    ClientRegistrationRepository clientRegistrationRepository;
+    @Override
+    protected void configure(HttpSecurity http) throws Exception{
+        http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .anyRequest().authenticated().and().oauth2Login()
+                .defaultSuccessUrl("/home",true)
+                .and()
+                .logout()
+//                .logoutSuccessUrl("/great")
+                .logoutSuccessHandler(oidcLogoutSuccessHandler())
+                .invalidateHttpSession(true)
+                .clearAuthentication(true)
+                .deleteCookies("JSESSIONID");
+    }
+    private OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler(){
+        OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
+        successHandler.setPostLogoutRedirectUri("http://localhost:8080");
+        return successHandler;
+    }
+
+}
+```
+
+___Links for buttons on HTML File___
+```html
+  <div class="social-container">
+                <a href="http://localhost:8080/oauth2/authorization/facebook" class="social"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="http://localhost:8080/oauth2/authorization/google" class="social"><i class="fa fa-google fa-2x"></i></a>
+                <a href="http://localhost:8080/oauth2/code/okta" class="social"><i class="fab fa fa-github fa-2x"></i></a>
+```
 _Urls to create generate account for creating apps for authentication in [__Google__](https://console.developers.google.com), [__Facebook__](https://developers.facebook.com/), [__Github__](https://developer.github.com) and [__Okta__](https://developer.okta.com/)these apps will return `client_id` and `secret_id` to deploy authentication._ 
 
 
