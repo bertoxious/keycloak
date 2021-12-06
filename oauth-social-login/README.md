@@ -5,7 +5,7 @@ Create a new Spring Boot Application with the following dependencies:
 - Thymeleaf
 - OAuth2 Client
 
-___Added properties for google, facebook and okta authentication in _Application.properties_ file___
+___Added properties for google, facebook and okta authentication in `Application.properties` file___
 ```java
 # Redirect to Google for authentication
 spring.security.oauth2.client.registration.google.client-id=992179403281-jgh356j1886hiod2vactoljmnaj3ejg5.apps.googleusercontent.com
