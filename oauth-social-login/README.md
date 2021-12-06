@@ -6,7 +6,8 @@ Create a new Spring Boot Application with the following dependencies:
 - OAuth2 Client
 
 
-_Urls to create generate account for creating apps for authentication in __Google__, __Facebook__, __Github__ and __Okta__ these apps will return `client_id` and `secret_id` to deploy authentication.
+_Urls to create generate account for creating apps for authentication in [__Google__](https://console.developers.google.com), [__Facebook__](https://developers.facebooks.com), [__Github__](https://developer.github.com) and [__Okta__](https://developer.okta.com/)these apps will return `client_id` and `secret_id` to deploy authentication._ 
+
 
 ___Added properties for google, facebook and okta authentication in `Application.properties` file___
 ```java
