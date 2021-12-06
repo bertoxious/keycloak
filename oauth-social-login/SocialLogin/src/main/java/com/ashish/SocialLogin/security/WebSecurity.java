@@ -17,6 +17,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .anyRequest().authenticated().and().oauth2Login()
+                .defaultSuccessUrl("/home",true)
                 .and()
                 .logout()
 //                .logoutSuccessUrl("/great")
@@ -30,4 +31,5 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         successHandler.setPostLogoutRedirectUri("http://localhost:8080");
         return successHandler;
     }
+
 }
